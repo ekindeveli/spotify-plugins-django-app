@@ -1,0 +1,104 @@
+body {
+  background: #fafafa;
+  color: #333333;
+  margin-top: 20px;
+  font-family: "Calibri";
+  height: calc(100vh - 20px);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+p {
+  font-size: 18px;
+}
+
+ul {
+  margin: 0;
+}
+
+.bg-steel {
+background: rgb(113,199,162);
+background: linear-gradient(90deg, rgba(113,199,162,1) 43%, rgba(47,207,216,1) 65%, rgba(13,110,130,1) 77%, rgba(2,0,36,1) 100%);
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #E0E9EE;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.menu-item {
+  color: #E3F2EB !important;
+  font-size: 18px;
+
+}
+
+.menu-item:hover{
+  color: white !important;
+}
+
+.lyric-starter {
+    justify-content: center;
+    text-align: center;
+}
+
+.lyric-starter button{
+    border-radius: 8px;
+}
+
+#chordText {
+    color: #444444 !important;
+}
+
+#home-btns {
+    justify-content: space-evenly;
+    padding-top: 40vh;
+}
+
+#lyric-selector, #chord-selector {
+    border: 1px solid #444444;
+    border-radius: 20px;
+    padding: 60px;
+    background-color: transparent;
+    transition-property: background-color;
+    transition-duration: 0.25s;
+    transition-timing-function: ease;
+}
+
+
+#lyric-selector a, #chord-selector a {
+    text-decoration: none;
+    color: #444444;
+}
+
+#lyric-selector:hover, #chord-selector:hover {
+    background-color: #bbddd6;
+}
+
+#lyrics-container, #chords-container {
+    padding-top: 2rem;
+    justify-content: center;
+}
+
+#lyrics-container > div {
+    text-align: center;
+}
+
+.homepg-text {
+    font-size: .85em;
+}
+
+.homepg-div {
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

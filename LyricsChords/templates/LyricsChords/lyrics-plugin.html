@@ -1,0 +1,18 @@
+{% extends 'LyricsChords/base.html' %}
+{% load static %}
+{% block content %}
+        <div id="lyrics-container" class="row d-flex">
+                <div class="col-md-12 pt-5">
+                        <h2 id="song">Retrieving Song Lyrics...</h2>
+                        <h5 id="artist"></h5>
+                        <br>
+                        <p id="lyricText"></p>
+                        <br>
+                        <p id="source"></p>
+                </div>
+        </div>
+{% endblock content%}
+
+{% block extrascripts %}
+        <script type="text/JavaScript" src="{%  static 'LyricsChords/js/printlyrics.js' %}"></script>
+{% endblock extrascripts %}
