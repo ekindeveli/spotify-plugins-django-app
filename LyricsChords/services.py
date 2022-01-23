@@ -21,27 +21,27 @@ class SpotiAuth:
         current_song_url = 'https://api.spotify.com/v1/me/player/currently-playing'
         player_url = 'https://api.spotify.com/v1/me/player'
         try:
-            current_song_data = requests.get(current_song_url, headers={"Authorization": f"Bearer {token}"}).json()
-            song_name = current_song_data.get('item', {}).get('name')
-            artist_name_data = []
-            artist_name_data.extend(current_song_data.get('item', {}).get('artists'))
-            artist_name = [i['name'] for i in artist_name_data if 'name' in i]
-            is_playing = True
+            # current_song_data = requests.get(current_song_url, headers={"Authorization": f"Bearer {token}"}).json()
             player_data = requests.get(player_url, headers={"Authorization": f"Bearer {token}"}).json()
+            song_name = player_data.get('item', {}).get('name')
+            artist_name_data = []
+            artist_name_data.extend(player_data.get('item', {}).get('artists'))
+            artist_name = [i['name'] for i in artist_name_data if 'name' in i]
+            is_playing = player_data.get('is_playing')
             time_elapsed = player_data.get('progress_ms')
             total_time = player_data.get('item', {}).get('duration_ms')
             time_left = total_time - time_elapsed
             return song_name, artist_name[0], is_playing, time_left
         except json.decoder.JSONDecodeError:
-            song_name = ''
+            song_name = 'JSONDecodeError'
             artist_name = ['']
-            is_playing = False
+            is_playing = True
             time_left = 10000
             return song_name, artist_name[0], is_playing, time_left
         except TypeError:
-            song_name = ''
+            song_name = 'TypeError'
             artist_name = ['']
-            is_playing = False
+            is_playing = True
             time_left = 10000
             return song_name, artist_name[0], is_playing, time_left
 
