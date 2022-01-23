@@ -21,8 +21,8 @@ class SpotiAuth:
         player_url = 'https://api.spotify.com/v1/me/player'
         try:
             # current_song_data = requests.get(current_song_url, headers={"Authorization": f"Bearer {token}"}).json()
-            print(f"token is: {token}")
             player_data = requests.get(player_url, headers={"Authorization": f"Bearer {token}"}).json()
+            print(f"player_data length is: {len(player_data)}")
             song_name = player_data.get('item', {}).get('name')
             artist_name_data = []
             artist_name_data.extend(player_data.get('item', {}).get('artists'))
