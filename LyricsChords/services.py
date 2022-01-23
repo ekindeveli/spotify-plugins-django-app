@@ -18,11 +18,10 @@ class SpotiAuth:
 
     @staticmethod
     def currently_playing(token):
-        current_song_url = 'https://api.spotify.com/v1/me/player/currently-playing'
-        player_url = 'https://api.spotify.com/v1/me/player'
+        player_url = 'https://api.spotify.com/v1/me/player?market=US'
         try:
             # current_song_data = requests.get(current_song_url, headers={"Authorization": f"Bearer {token}"}).json()
-            player_data = requests.get(player_url, headers={"Authorization": f"Bearer {token}"}).json()
+            player_data = requests.get(player_url, headers={"Authorization": f"Bearer {token}", "Accept": "application/json", "Content-Type": "application/json"}).json()
             song_name = player_data.get('item', {}).get('name')
             artist_name_data = []
             artist_name_data.extend(player_data.get('item', {}).get('artists'))
@@ -41,7 +40,7 @@ class SpotiAuth:
         except TypeError:
             song_name = 'TypeError'
             artist_name = ['']
-            is_playing = True
+            is_playing = False
             time_left = 10000
             return song_name, artist_name[0], is_playing, time_left
 
