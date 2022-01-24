@@ -36,7 +36,7 @@ function print_lyrics(json) {
     error: function(jqXHR, exception) {
             if (jqXHR.status == 500) {
                 console.log("failure with status 500, please restart application...")
-//                myUrl = "https://spotifyplugins.herokuapp.com/"
+//                myUrl = "https://pluginsforspotify.herokuapp.com/"
 //                window.location = myUrl
             };
         },

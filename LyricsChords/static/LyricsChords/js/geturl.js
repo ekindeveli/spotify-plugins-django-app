@@ -15,7 +15,7 @@ window.addEventListener("load", function(){
         success: function (response) {
                     // on successfull creating object
                     console.log("success, redirecting...")
-                    myUrl = "https://spotifyplugins.herokuapp.com/"
+                    myUrl = "https://pluginsforspotify.herokuapp.com/"
                     myUrl += response['url']
                     window.location = myUrl
                 },

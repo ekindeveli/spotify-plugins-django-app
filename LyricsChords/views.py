@@ -21,7 +21,7 @@ def plugin_start(request):
     # client_secret = os.environ.get('DJANGO_LYRIC_CLIENT_SECRET')
     scope2 = "user-read-playback-state"
     url = f'https://accounts.spotify.com/authorize?response_type=token&client_id={client_id}' \
-          f'&scope={scope2}&redirect_uri=https://spotifyplugins.herokuapp.com/login-redirect/'
+          f'&scope={scope2}&redirect_uri=https://pluginsforspotify.herokuapp.com/login-redirect/'
     return redirect(url)
 
 
