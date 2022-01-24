@@ -102,3 +102,10 @@ background: linear-gradient(90deg, rgba(113,199,162,1) 43%, rgba(47,207,216,1) 6
     flex-direction: column;
     justify-content: space-between;
 }
+
+.spotify-logo {
+    transform: scale(0.8);
+    position: fixed;
+    bottom: 5px;
+    right: 0;
+}
