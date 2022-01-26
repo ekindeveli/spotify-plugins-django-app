@@ -225,6 +225,7 @@ class WebScraper:
             songname3 = WebScraper.query_cleaner(song_name2)
             songname3 = songname3.replace("+", "")
             artistname3 = artistname3.replace("+", "")
+            artistname3 = artistname3.replace("and", "")
             songname_final = songname3.replace(" ", "").lower()
             artistname_final = artistname3.replace(" ", "").lower()
             url = f"http://www.azlyrics.com/lyrics/{artistname_final}/{songname_final}.html"
