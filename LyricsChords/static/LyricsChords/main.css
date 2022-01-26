@@ -109,3 +109,18 @@ background: linear-gradient(90deg, rgba(113,199,162,1) 43%, rgba(47,207,216,1) 6
     bottom: 5px;
     right: 0;
 }
+
+.l-redir-container {
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.redir-text {
+    padding-top: 5.5rem;
+}
+
+l-redir-text {
+    font-size: .9em;
+}
