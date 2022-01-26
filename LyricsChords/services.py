@@ -291,6 +291,8 @@ class ChordScraper:
             query1 = query1.replace('ş', 's')
         if 'ı' in query1:
             query1 = query1.replace('ı', 'i')
+        if '?' in query1:
+            query1 = query1.replace('?', '')
         query1 = query1.strip()
         query1 = query1.lower()
         return query1
